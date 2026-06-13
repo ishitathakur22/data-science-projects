@@ -1,0 +1,45 @@
+# Market Entry Analysis for ABG Motors in India
+
+## Overview
+ABG Motors, a fictional Japan-based automobile manufacturer, is considering expanding into the Indian market. This project analyzes sales data from both Japan and India to assess whether the Indian market has sufficient potential to meet a target of **10,000 car sales per year**.
+
+## Problem Statement
+The goal is to determine if the Indian automobile market is similar enough to the Japanese market to justify entry. A **Logistic Regression classification model** is built to predict the likelihood of a customer purchasing a new vehicle, based on demographic and behavioral features.
+
+## Dataset
+Two datasets were used:
+- **Japanese Dataset** — Contains customer purchase history (used for model training)
+- **Indian Dataset** — Contains potential customer data (used for prediction)
+
+### Features
+| Column | Description |
+|--------|-------------|
+| ID | Unique Customer ID |
+| CURR_AGE | Age of the customer (years) |
+| GENDER | Male / Female |
+| ANN_INCOME | Annual Income (Yen / Rs.) |
+| AGE_CAR | Days since last car maintenance |
+| PURCHASE | Whether customer bought a new car (1/0) |
+
+## Approach
+- Performed **Exploratory Data Analysis (EDA)** on both datasets
+- Engineered `AGE_CAR` into 4 categorical segments:
+  - Segment 1: < 200 days
+  - Segment 2: 200–360 days
+  - Segment 3: 360–500 days
+  - Segment 4: > 500 days
+- Built a **Logistic Regression model** on the Japanese dataset
+- Applied the model to the Indian dataset to predict potential buyers
+- Evaluated model performance using accuracy, confusion matrix, and other metrics
+- Created **Tableau visualizations** for business insights
+
+## Results
+- Estimated the count of potential customers in the Indian market
+- Provided business interpretation of model coefficients
+- Assessed whether India can achieve the 10,000 cars/year target
+
+## Tools & Technologies
+- Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn)
+- Jupyter Notebook
+- Tableau
+- Microsoft Excel
